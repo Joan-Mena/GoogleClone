@@ -60,13 +60,124 @@ main .main-input{
     margin: 0 auto; /*el margin 0 para que se posicione a la mitad*/
     margin-bottom: 35px;
 }
-main .main-input-container{
+main .main-input-container{/*aplicacion de estilos al contenedor del input*/
     width: 525px;
     border-radius: 100px;
-    border: 1px solid #000000;
+    border: 1px solid #000000;/*color del marco del contenedor del input*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
+main .main-input input{/*el input es mas pequeno que el marco y se ve como un rectangulo dentro del marco, con esta linea lo ajustamos
+    para que tenga las medidas correctas y quitarle el rectangulo que trae por defecto*/
+    width: 450px;
+    height: 40px;
+    border: none;/*le quitamos el borde al input*/
+    outline: none;/*con esto quitamos el borde que se genera al hacer click*/
+}
+main .main-input .search-icon:hover{/*NO SE ESTA APLICANDO, REVISAR*/
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    background-repeat: no-repeat;
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+/*Agregar icono de lupa*/
+main .main-input .search-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;/*esto me gusto como quedo, por eso se lo agregue*/
+}
+/*agregar icono del microfono*/
+main .main-input .micro-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;/*para que muestre el icono de una mano al parsar por el icono del microfono*/
+}
+/*Definir la posicion de los botones*/
+main .main-buttons div{/*erro corregido del profe, falto agregar el nombre de la clase en el HTML*/
+    display: inline-block;
+}
+/*Darle diseno a la caja de botones*/
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0  15px;
+    margin-right: 15px;/*se agrega un espacio en medio de los botones*/
+    
+}
+/*poner efecto hover a los botones*/
+main .main-buttons button:hover{
+    border: 1px solid #c6c6c6;/*con estas dos lineas hacemos que se cree una sombre al margen y el boton resalte cuando... */
+    box-shadow: 0 1px 1px #000001;/*pasamos el cursor por encima. */
+    color: #222;/*con esto hacemos que al pazar el cursor sobre el boton, el color del texto resalte mas a uno mas fuerte*/
+    cursor: pointer;
+}
+.google-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e4e7ea; /* Mismo color del footer */
+    color: #202124;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.google-footer a {
+    text-decoration: none;
+    color: #3e4047;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.google-footer a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    margin-right: 20px;
+}
+.footer-country {
+    display: flex;
+    justify-content: flex-start; /* Alinea la palabra hacia la derecha */
+    align-items: center; /* Centra verticalmente */
+    background-color: #e4e7ea; /* Mismo color del footer */
+    color: #202124;
+    padding: 5px 20px; /* Espaciado interno uniforme */
+    font-size: 14px;
+    position: relative; /* Asegura que quede en su posición natural */
+    margin-top: 14.1%; /* Elimina cualquier espacio entre `footer-country` y el footer */
+    margin-bottom: 5px;
+    border-bottom: 1px solid #202124; /* Borde blanco delgado */
+}
+.footer-country span {
+    margin-left: 1%; /* Ajusta el espacio desde el borde derecho */
+    color: #3e4047;
+}
+
+
+
+
 
 
