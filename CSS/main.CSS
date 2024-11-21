@@ -30,6 +30,9 @@ a{
     text-decoration: none; /*no olvidar, para quitar el subrayado al texto jeje*/
     cursor: pointer; /*esto es para que salga el icono de una mano al pasar por el elemnto, aunq realmete esto ya lo hacia en su antigua configuracion*/
 }
+a:hover{
+    text-decoration: underline;
+}
 nav .nav-right-section .menu-icon{
     background-image: url("https://static.thenounproject.com/png/756729-200.png");/*la imagen de los 9 puntitos*/
     background-repeat: no-repeat;/*para no repetir la imagen en caso de que no ocupe todo el espacio*/
@@ -37,7 +40,14 @@ nav .nav-right-section .menu-icon{
     background-size: contain;/*ajustar la imagen al tamano del contenedo*/
     width: 25px;
     height: 25px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* Para hacer que el cambio de sombra sea suave */
 }
+/*pequeno detalle que falto al documento, no es el mismo de la pagina original pero la intencion cuenta :)*/
+nav .nav-right-section .menu-icon:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
 nav .nav-right-section img{
     border-radius: 50%;/*para poner como un circulo la foto o icono de perfil*/
     margin-left: 10px;
